@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'star-wars-app';
+export class AppComponent implements OnInit {
+  title = 'Test Star Wars API';
+
+  constructor( ) { }
+
+  ngOnInit() {
+  }
 }
