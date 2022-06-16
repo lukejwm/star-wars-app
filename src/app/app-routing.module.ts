@@ -5,7 +5,7 @@ import { EditMovieComponent } from './components/edit-movie/edit-movie.component
 import { ViewMovieComponent } from './components/view-movie/view-movie.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'add-movie' }, 
+  { path: '', pathMatch: 'full', redirectTo: 'app' }, 
   { path: 'add-movie', component: AddMovieComponent },
   { path: 'edit-movie/:name', component: EditMovieComponent },
   { path: 'view-movie/:id', component: ViewMovieComponent }, 
