@@ -21,41 +21,41 @@ export class StarwarsService {
     })
   };
 
-  //GET all characters
+  //GET character by id
   GetCharcaters(id: number): Observable<Character> {
     return this.http
-                .get<Character>(this.baseUrl + '/people/' + id)
+                .get<Character>(this.baseUrl + 'people/' + id)
                 .pipe(retry(1), catchError(this.handleError));  
   }
 
   //GET movie by episode id
   GetMovie(id: number): Observable<Movie> {
     return this.http
-                .get<Movie>(this.baseUrl + '/films/' + id)
+                .get<Movie>(this.baseUrl + 'films/' + id)
                 .pipe(retry(1), catchError(this.handleError)); 
   }
 
   GetPlanets(id: number): Observable<Planets> {
     return this.http
-                .get<Planets>(this.baseUrl + '/planets/' + id)
+                .get<Planets>(this.baseUrl + 'planets/' + id)
                 .pipe(retry(1), catchError(this.handleError));  
   }
 
   GetSpaceships(id: number): Observable<Spaceships> {
     return this.http
-                .get<Spaceships>(this.baseUrl + '/starships/' + id)
+                .get<Spaceships>(this.baseUrl + 'starships/' + id)
                 .pipe(retry(1), catchError(this.handleError));  
   }
 
   GetSpecies(id: number): Observable<Species> {
     return this.http
-                .get<Species>(this.baseUrl + '/species/' + id)
+                .get<Species>(this.baseUrl + 'species/' + id)
                 .pipe(retry(1), catchError(this.handleError));  
   }
 
   GetVehicles(id: number): Observable<Vehicles> {
     return this.http
-                .get<Vehicles>(this.baseUrl + '/species/' + id)
+                .get<Vehicles>(this.baseUrl + 'vehicles/' + id)
                 .pipe(retry(1), catchError(this.handleError));  
   }
 

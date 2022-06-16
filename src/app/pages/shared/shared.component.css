@@ -1,0 +1,25 @@
+h1 {
+    font-size: 72px; 
+    color: gold; 
+}
+
+p {
+    font-size: 25px; 
+    color: white;
+}
+
+.row {
+    display: flex;
+  }
+
+.column {
+    float: left;
+  }
+  
+  .left {
+    width: 25%;
+  }
+  
+  .right {
+    width: 75%;
+  }
