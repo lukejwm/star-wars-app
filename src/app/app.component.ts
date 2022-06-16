@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { delay, filter } from 'rxjs/operators';
@@ -15,9 +15,11 @@ export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver, private router: Router) {}
+  constructor(private observer: BreakpointObserver, private elementRef: ElementRef, private router: Router) {}
 
   ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black'; 
+
     this.observer
       .observe(['(max-width: 800px)'])
       .pipe(delay(1), untilDestroyed(this))

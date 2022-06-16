@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddMovieComponent } from './components/add-movie/add-movie.component';
-import { EditMovieComponent } from './components/edit-movie/edit-movie.component';
-import { ViewMovieComponent } from './components/view-movie/view-movie.component';
+import { CharactersComponent } from './pages/characters/characters.component';
+import { MoviesComponent } from './pages/movies/movies.component';
+import { PlanetsComponent } from './pages/planets/planets.component';
+import { SpaceshipsComponent } from './pages/spaceships/spaceships.component';
+import { SpeciesComponent } from './pages/species/species.component';
+import { VehiclesComponent } from './pages/vehicles/vehicles.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app' }, 
-  { path: 'add-movie', component: AddMovieComponent },
-  { path: 'edit-movie/:name', component: EditMovieComponent },
-  { path: 'view-movie/:id', component: ViewMovieComponent }, 
+  { path: 'movies', component: MoviesComponent },
+  { path: 'charcaters', component: CharactersComponent },
+  { path: 'spaceships', component: SpaceshipsComponent }, 
+  { path: 'planets', component: PlanetsComponent }, 
+  { path: 'vehicles', component: VehiclesComponent }, 
+  { path: 'species', component: SpeciesComponent }
 ];
 
 @NgModule({

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewMovieComponent } from './view-movie.component';
+import { SpaceshipsComponent } from './spaceships.component';
 
-describe('ViewMovieComponent', () => {
-  let component: ViewMovieComponent;
-  let fixture: ComponentFixture<ViewMovieComponent>;
+describe('SpaceshipsComponent', () => {
+  let component: SpaceshipsComponent;
+  let fixture: ComponentFixture<SpaceshipsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewMovieComponent ]
+      declarations: [ SpaceshipsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ViewMovieComponent);
+    fixture = TestBed.createComponent(SpaceshipsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,21 +7,29 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddMovieComponent } from './components/add-movie/add-movie.component';
-import { EditMovieComponent } from './components/edit-movie/edit-movie.component';
-import { ViewMovieComponent } from './components/view-movie/view-movie.component';
+
 
 import { StarwarsService } from './services/starwars.service.ts.service';
+import { MoviesComponent } from './pages/movies/movies.component';
+import { CharactersComponent } from './pages/characters/characters.component';
+import { SpaceshipsComponent } from './pages/spaceships/spaceships.component';
+import { PlanetsComponent } from './pages/planets/planets.component';
+import { VehiclesComponent } from './pages/vehicles/vehicles.component';
+import { SpeciesComponent } from './pages/species/species.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddMovieComponent,
-    EditMovieComponent,
-    ViewMovieComponent
+    MoviesComponent,
+    CharactersComponent,
+    SpaceshipsComponent,
+    PlanetsComponent,
+    VehiclesComponent,
+    SpeciesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +40,7 @@ import { StarwarsService } from './services/starwars.service.ts.service';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [

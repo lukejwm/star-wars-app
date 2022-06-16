@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Movie } from '../models/movie';
+import { Character, Movie, Planets, Spaceships, Species, Vehicles } from '../models/models';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -21,11 +21,42 @@ export class StarwarsService {
     })
   };
 
+  //GET all characters
+  GetCharcaters(id: number): Observable<Character> {
+    return this.http
+                .get<Character>(this.baseUrl + '/people/' + id)
+                .pipe(retry(1), catchError(this.handleError));  
+  }
+
   //GET movie by episode id
   GetMovie(id: number): Observable<Movie> {
     return this.http
                 .get<Movie>(this.baseUrl + '/films/' + id)
                 .pipe(retry(1), catchError(this.handleError)); 
+  }
+
+  GetPlanets(id: number): Observable<Planets> {
+    return this.http
+                .get<Planets>(this.baseUrl + '/planets/' + id)
+                .pipe(retry(1), catchError(this.handleError));  
+  }
+
+  GetSpaceships(id: number): Observable<Spaceships> {
+    return this.http
+                .get<Spaceships>(this.baseUrl + '/starships/' + id)
+                .pipe(retry(1), catchError(this.handleError));  
+  }
+
+  GetSpecies(id: number): Observable<Species> {
+    return this.http
+                .get<Species>(this.baseUrl + '/species/' + id)
+                .pipe(retry(1), catchError(this.handleError));  
+  }
+
+  GetVehicles(id: number): Observable<Vehicles> {
+    return this.http
+                .get<Vehicles>(this.baseUrl + '/species/' + id)
+                .pipe(retry(1), catchError(this.handleError));  
   }
 
   //Error Handling
